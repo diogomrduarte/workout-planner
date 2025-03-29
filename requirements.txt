@@ -1,3 +1,6 @@
 streamlit
 numpy
 pandas
+cv2
+json
+pillow
