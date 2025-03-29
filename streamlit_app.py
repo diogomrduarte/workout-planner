@@ -14,11 +14,11 @@ def load_exercise_data():
 # Load muscle annotations
 def load_muscle_data():
     with open("annotations.json", "r") as f:
-        return json.load(f)["images/template.jpg"]["regions"]
+        return json.load(f)["./images/template.jpg"]["regions"]
 
 # Load and prepare template image
 def load_template_image():
-    image = cv2.imread("images/template.jpg")
+    image = cv2.imread("./images/template.jpg")
     return cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 # Function to highlight selected muscles
