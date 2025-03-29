@@ -4,7 +4,7 @@ import streamlit as st
 def front_page():
     st.title('🏋️ Workout Planner App')
 
-    st.image("images/template.jpg", use_container_width=True)
+    st.image("images/gym_art.jpg", use_container_width=True)
 
     st.write("""
     ## Sample Text
