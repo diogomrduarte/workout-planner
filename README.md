@@ -20,17 +20,17 @@ This is filler text, please replace this with a explanatory text about further r
 
 This dataset contains 470 gym exercises, links providing a description, the muscles targeted by them, the equipment used and a brief explanation of each equipment. 
 
-> Metadata:
->- `Exercise_Name` - Name of the exercise
->- `Description_URL` - Link containing a description to that exercise
->- `Exercise_Image` - Link to an image of that exercise, if available
->- `Exercise_Image1` - Link to another image of that exercise, if available
->- `muscle_gp_details` - Details of the muscle group being targeted
->- `muscle_gp` - Name of the muscle group being targeted
->- `equipment_details` - Details of the equipment being used
->- `Equipment` - Name of the equipment being used
->- `Rating` - Rating of the exercise, may be interpreted as a measure of optimality
->- `Description` - Junk column, only contains one value i.e. "Average"
+Metadata:
+- `Exercise_Name` - Name of the exercise
+- `Description_URL` - Link containing a description to that exercise
+- `Exercise_Image` - Link to an image of that exercise, if available
+- `Exercise_Image1` - Link to another image of that exercise, if available
+- `muscle_gp_details` - Details of the muscle group being targeted
+- `muscle_gp` - Name of the muscle group being targeted
+- `equipment_details` - Details of the equipment being used
+- `Equipment` - Name of the equipment being used
+- `Rating` - Rating of the exercise, may be interpreted as a measure of optimality
+- `Description` - Junk column, only contains one value i.e. "Average"
 
 ## GitHub Codespaces
 
