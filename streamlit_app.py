@@ -18,3 +18,14 @@ def front_page():
     - **Brandon Seichal** (20240592)
     - **Diogo Duarte** (20240525)
     """)
+
+# Navigation
+PAGES = {
+    "Front Page": front_page
+    # "Planner Page": planner_page,
+    # "Visualizations": visualization_page
+}
+
+st.sidebar.title("Navigation")
+choice = st.sidebar.radio("Go to", list(PAGES.keys()))
+PAGES[choice]()
