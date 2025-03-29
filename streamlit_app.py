@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import cv2
+import cv2 # opencv-python library for image processing
 import json
 from PIL import Image # pillow library for image processing
 
