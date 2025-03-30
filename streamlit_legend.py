@@ -50,11 +50,11 @@ def load_template_image():
 # Function to get the color based on the number of exercises targeting the muscle
 def get_gradient_color(count):
 
-    color_1 = (255, 245, 100)
-    color_2 = (255, 210, 80)
-    color_3 = (255, 165, 59)
-    color_4 = (220, 100, 43)
-    color_5 = (183, 28, 28)
+    color_1 = (173, 216, 230)  # Light Blue
+    color_2 = (135, 206, 250)  # Sky Blue
+    color_3 = (70, 130, 180)   # Steel Blue
+    color_4 = (25, 25, 112)    # Midnight Blue
+    color_5 = (0, 0, 139)      # Dark Blue
 
     if count == 1:
         return color_1
@@ -154,11 +154,11 @@ def planner_page():
                 height: 20px;
                 border-radius: 10px;
                 background: linear-gradient(to right, 
-                    rgb(255, 245, 100),
-                    rgb(255, 210, 80),
-                    rgb(255, 165, 59),
-                    rgb(220, 100, 43),
-                    rgb(183, 28, 28));
+                    rgb(173, 216, 230),
+                    rgb(135, 206, 250),
+                    rgb(70, 130, 180),
+                    rgb(25, 25, 112),
+                    rgb(0, 0, 139));
             "></div>
             <div style="
                 display: flex;
