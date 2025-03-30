@@ -1,7 +1,6 @@
 # 🏋️ Workout Planner App
 
 This app helps you plan your workouts and visualize the muscles targeted by different exercises.
-
 You can select various exercises, and the app will highlight the corresponding muscles on an anatomical template.
 
 ## ▶️ Demo App
@@ -33,7 +32,3 @@ Metadata:
 - `Equipment` - Name of the equipment being used
 - `Rating` - Rating of the exercise, may be interpreted as a measure of optimality
 - `Description` - Junk column, only contains one value i.e. "Average"
-
-## GitHub Codespaces
-
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/app-starter-kit?quickstart=1)
