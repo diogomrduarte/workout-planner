@@ -11,7 +11,6 @@ def front_page():
 
     st.image("images/gym_art.jpg", use_container_width=True)
 
-    
     st.write("""
     ## Welcome to the Workout Planner App! 💪
     This app helps you plan your workouts and visualize the muscles targeted by different exercises. You can select various exercises, and the app will highlight the corresponding muscles on an anatomical template.
@@ -48,25 +47,41 @@ def load_template_image():
     image = cv2.imread("images/template.jpg")
     return cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
+# Function to get the color based on the number of exercises targeting the muscle
+def get_gradient_color(count):
+    if count == 1:
+        return (255, 217, 102) 
+    elif count == 2:
+        return (255, 140, 66)  
+    else:
+        return (216, 59, 1)
+
+
 # Function to highlight selected muscles
 def highlight_muscles(selected_exercises, exercise_data, muscle_data, template_image):
     highlighted_image = template_image.copy()
-    muscles_to_highlight = set()
-    
-    # Identify muscles to highlight based on selected exercises
+    muscle_counts = {}
+
+    # Count the number of exercises targeting each muscle
     for exercise in selected_exercises:
-        muscles_to_highlight.update(exercise_data[exercise_data["Exercise_Name"] == exercise]["muscle_gp"].values)
-    
-    highlight_color = (255, 0, 0)  # Red in RGB
+        muscles = exercise_data[exercise_data["Exercise_Name"] == exercise]["muscle_gp"].values
+        for muscle in muscles:
+            muscle_counts[muscle] = muscle_counts.get(muscle, 0) + 1
+
     for region in muscle_data.values():
         muscle_label = region["region_attributes"].get("label", "")
-        if muscle_label in muscles_to_highlight:
+        count = muscle_counts.get(muscle_label, 0)
+        
+        if count > 0:
+            # Get the appropriate color based on the muscle count
+            highlight_color = get_gradient_color(count)
             points = np.array(list(zip(region["shape_attributes"]["all_points_x"],
                                        region["shape_attributes"]["all_points_y"])), np.int32)
             points = points.reshape((-1, 1, 2))
             cv2.fillPoly(highlighted_image, [points], highlight_color)
-    
+
     return Image.fromarray(highlighted_image)
+
 
 def planner_page():
     # Streamlit UI
@@ -90,9 +105,8 @@ def planner_page():
 PAGES = {
     "Front Page": front_page,
     "Planner Page": planner_page
-    # "Visualizations": visualization_page
 }
 
 st.sidebar.title("Navigation")
 choice = st.sidebar.radio("Go to", list(PAGES.keys()))
-PAGES[choice]()
+PAGES[choice]()  
