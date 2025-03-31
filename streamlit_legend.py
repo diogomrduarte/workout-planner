@@ -37,7 +37,7 @@ def load_exercise_data():
 
 # Load muscle annotations
 def load_muscle_data():
-    with open("annotations.json", "r") as f:
+    with open("new_notes.json", "r") as f:
         data = json.load(f)
         # Access the muscle regions directly from the "template.jpg" key
         return data.get("template.jpg", {}).get("regions", {})
@@ -47,14 +47,35 @@ def load_template_image():
     image = cv2.imread("images/template.jpg")
     return cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
+
+    # color_1 = (255, 185, 50)
+    # color_2 = (230, 150, 60)
+    # color_3 = (180, 110, 50)
+    # color_4 = (120, 80, 40)
+    # color_5 = (60, 50, 30)
+
+    # color_1 = (255, 245, 100)
+    # color_2 = (255, 210, 80)
+    # color_3 = (255, 165, 59)
+    # color_4 = (220, 100, 43)
+    # color_5 = (183, 28, 28)
+
+    # color_1 = (240, 200, 60)
+    # color_2 = (225, 150, 50)
+    # color_3 = (210, 100, 40)
+    # color_4 = (195, 50, 35)
+    # color_5 = (160, 20, 20)
+
+
+
 # Function to get the color based on the number of exercises targeting the muscle
 def get_gradient_color(count):
 
-    color_1 = (173, 216, 230)  # Light Blue
-    color_2 = (135, 206, 250)  # Sky Blue
-    color_3 = (70, 130, 180)   # Steel Blue
-    color_4 = (25, 25, 112)    # Midnight Blue
-    color_5 = (0, 0, 139)      # Dark Blue
+    color_1 = (255, 245, 100)
+    color_2 = (255, 210, 80)
+    color_3 = (255, 165, 59)
+    color_4 = (220, 100, 43)
+    color_5 = (183, 28, 28)
 
     if count == 1:
         return color_1
@@ -97,6 +118,7 @@ def highlight_muscles(selected_exercises, exercise_data, muscle_data, template_i
 def planner_page():
     # Streamlit UI
     st.title("Gym Exercise Muscle Visualization")
+    # st.markdown("<h1 style='text-align: center;'>Gym Exercise Muscle Visualization</h1>", unsafe_allow_html=True)
 
     # Load data
     exercise_data = load_exercise_data()
@@ -140,7 +162,8 @@ def planner_page():
     )
 
     # Display the selected workout's visualization
-    st.subheader("Muscle Visualization")
+    # st.subheader("Workout Visualization")
+    st.markdown("<h2 style='text-align: center;'>Workout Preview</h2>", unsafe_allow_html=True)
     if selected_exercises:
         result_image = highlight_muscles(
             selected_exercises, exercise_data, muscle_data, template_image
@@ -154,11 +177,12 @@ def planner_page():
                 height: 20px;
                 border-radius: 10px;
                 background: linear-gradient(to right, 
-                    rgb(173, 216, 230),
-                    rgb(135, 206, 250),
-                    rgb(70, 130, 180),
-                    rgb(25, 25, 112),
-                    rgb(0, 0, 139));
+                    rgb(255, 245, 100),
+                    rgb(255, 210, 80),
+                    rgb(255, 165, 59),
+                    rgb(220, 100, 43),
+                    rgb(183, 28, 28)
+                    );
             "></div>
             <div style="
                 display: flex;
@@ -173,7 +197,7 @@ def planner_page():
         </div>
         """, unsafe_allow_html=True)
     else:
-        st.image(template_image, caption="Workout Preview", use_container_width=True)
+        st.image(template_image, caption="No exercises selected", use_container_width=True)
 
 # Navigation
 PAGES = {
