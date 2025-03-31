@@ -37,7 +37,7 @@ def load_exercise_data():
 
 # Load muscle annotations
 def load_muscle_data():
-    with open("new_notes.json", "r") as f:
+    with open("annotations/new_notes.json", "r") as f:
         data = json.load(f)
         # Access the muscle regions directly from the "template.jpg" key
         return data.get("template.jpg", {}).get("regions", {})
