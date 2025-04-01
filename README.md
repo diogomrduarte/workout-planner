@@ -35,4 +35,4 @@ Metadata:
 
 ## 📄 Streamlit Documentarion
 To better understand the code and concepts used and/or to guide you in future implementations and additions, make sure to follow the official 
-[Streamlit documentation and references]([https://docs.streamlit.io/](https://docs.streamlit.io/develop/api-reference))
+[Streamlit documentation and references](https://docs.streamlit.io/develop/api-reference)
