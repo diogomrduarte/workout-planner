@@ -31,7 +31,7 @@ def front_page():
 
 # Load exercise data
 def load_exercise_data():
-    df = pd.read_csv("data/gym_exercises.csv")
+    df = pd.read_csv("data/prep_data.csv")
     df["muscle_gp"] = df["muscle_gp"].str.replace(" ", "")
     return df
 
