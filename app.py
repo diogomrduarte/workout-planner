@@ -7,12 +7,12 @@ from PIL import Image  # pillow library for image processing
 
 # Function to display the front page
 def front_page():
-    st.title('🏋️ Workout Planner App')
+    st.title('🏋️ Workout Planner')
 
     st.image("images/gym_art.jpg", use_container_width=True)
 
     st.write("""
-    ## Welcome to the Workout Planner App! 💪
+    ## Welcome to Workout Planner! 💪
     This app helps you plan your workouts and visualize the muscles targeted by different exercises. You can select various exercises, and the app will highlight the corresponding muscles on an anatomical template.
 
     ### How it works:
