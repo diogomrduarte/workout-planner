@@ -139,8 +139,8 @@ def planner_page():
             "Machine shoulder press", "Barbell Shoulder Press"
         ],
         "Home Alone": [
-            "Elbow plank", "Pullups", "Bottoms Up", "Spider crawl", "Cocoons", "Back extension", "Forward lunge", 
-            "Superman", "Scissors Jump"
+            "Elbow plank", "Pushups", "Bottoms Up", "Spider crawl", "Cocoons", "Back extension", "Forward lunge", 
+            "Superman", "Scissors Jump", "Triceps dip"
         ]
     }
 
