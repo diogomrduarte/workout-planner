@@ -137,6 +137,10 @@ def planner_page():
             "Incline cable chest press", "Leverage Chest Press", "Cable Chest Press", "Chest dip",
             "Seated barbell shoulder press", "Smith machine shoulder press", "Seated cable shoulder press",
             "Machine shoulder press", "Barbell Shoulder Press"
+        ],
+        "Home Alone": [
+            "Elbow plank", "Pullups", "Bottoms Up", "Spider crawl", "Cocoons", "Back extension", "Forward lunge", 
+            "Superman", "Scissors Jump"
         ]
     }
 
