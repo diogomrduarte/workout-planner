@@ -7,7 +7,7 @@ from PIL import Image  # pillow library for image processing
 
 # Function to display the front page
 def front_page():
-    st.title('🏋️ Workout Planner')
+    st.markdown("<h1 style='text-align: center;'>🏋️ Workout Planner</h1>", unsafe_allow_html=True)
 
     st.image("images/gym_art.jpg", use_container_width=True)
 
