@@ -13,11 +13,11 @@ def front_page():
 
     st.write("""
     ## Welcome to Workout Planner! 💪
-    This app helps you plan your workouts and visualize the muscles targeted by different exercises. You can select various exercises, and the app will highlight the corresponding muscles on an anatomical template.
+    This website helps you plan your workouts and visualize the muscles targeted by different exercises. You can select various exercises, and the corresponding muscles will be highlighted on an anatomical template.
 
     ### How it works:
     - Select the exercises you want to include in your workout routine.
-    - The app will highlight the muscles that are engaged during those exercises.
+    - The website will highlight the muscles that are engaged during those exercises.
     - Use this to tailor your workouts and target specific muscle groups.
     """)
 
